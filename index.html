@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Williams Ransom | Cybersecurity Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    .dark-mode .project-card {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+    }
+    .hero {
+      background-color: #0d6efd;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .project-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    .list-group-item i {
+      margin-right: 0.5rem;
+      color: #0d6efd;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Buttons -->
+  <div class="toggle-btn">
+    <button class="btn btn-dark me-2" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+    <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-file-download"></i> PDF</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-down">
+    <h1>Williams Ransom</h1>
+    <p class="lead">Cybersecurity Enthusiast | Threat Hunter | Python Developer</p>
+  </section>
+
+  <div class="container">
+
+    <!-- About Me -->
+    <section data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-user-shield"></i> About Me</h2>
+      <p>
+        I'm a cybersecurity analyst passionate about threat detection, vulnerability assessment, and digital forensics. I enjoy building tools that automate security tasks and uncover hidden risks. With hands-on experience in Python scripting, packet analysis, and SIEM tools, I aim to contribute to a safer digital world.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="fab fa-python"></i> Python (Security Scripting, Automation)</li>
+        <li class="list-group-item"><i class="fas fa-network-wired"></i> Wireshark, Nmap, Metasploit</li>
+        <li class="list-group-item"><i class="fas fa-chart-line"></i> Splunk, Zeek, Burp Suite</li>
+        <li class="list-group-item"><i class="fas fa-bug"></i> Vulnerability Assessment & Threat Hunting</li>
+        <li class="list-group-item"><i class="fas fa-memory"></i> Digital Forensics (Volatility, Autopsy)</li>
+        <li class="list-group-item"><i class="fas fa-shield-alt"></i> Incident Response & Log Analysis</li>
+        <li class="list-group-item"><i class="fas fa-cloud"></i> Cloud Security Fundamentals</li>
+        <li class="list-group-item"><i class="fas fa-terminal"></i> Linux & Networking Basics (Cisco NetAcad)</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+
+      <div class="project-card" data-aos="zoom-in">
+        <h4><i class="fas fa-search"></i> Vulnerability Analysis Tool</h4>
+        <p>
+          A Python-based scanner that identifies outdated software and cross-references findings with CVE databases.
+        </p>
+        <ul>
+          <li><strong>Problem Solved:</strong> Manual vulnerability checks are slow and error-prone.</li>
+          <li><strong>My Role:</strong> Designed scanning logic, integrated CVE API, built reporting engine.</li>
+          <li><strong>Results:</strong> Reduced scan time by 40% compared to manual methods.</li>
+          <li><strong>Tools:</strong> Python, CVE API, HTML/JSON reporting</li>
+        </ul>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in">
+        <h4><i class="fas fa-eye"></i> Threat Hunting Dashboard</h4>
+        <p>
+          A Splunk-based dashboard that visualizes suspicious activity across endpoints and network traffic.
+        </p>
+        <ul>
+          <li><strong>Problem Solved:</strong> Lack of visibility into lateral movement and privilege escalation.</li>
+          <li><strong>My Role:</strong> Created custom queries, alerts, and visualizations.</li>
+          <li><strong>Results:</strong> Detected 3 previously unnoticed brute-force attempts in lab environment.</li>
+          <li><strong>Tools:</strong> Splunk, Sysmon, MITRE ATT&CK</li>
+        </ul>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in">
+        <h4><i class="fas fa-brain"></i> Memory Forensics Case Study</h4>
+        <p>
+          Analyzed a memory dump using Volatility to uncover signs of malware and unauthorized access.
+        </p>
+        <ul>
+          <li><strong>Problem Solved:</strong> Investigated suspicious behavior on a compromised host.</li>
+          <li><strong>My Role:</strong> Extracted artifacts, analyzed processes, and documented findings.</li>
+          <li><strong>Results:</strong> Identified malicious DLL injection and persistence mechanisms.</li>
+          <li><strong>Tools:</strong> Volatility, Autopsy, Windows Event Logs</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+      <p><i class="fas fa-paper-plane"></i> Email: <a href="mailto:williamsransom23@gmail.com">williamsransom23@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/williamsransom-23" target="_blank">williamsransom-23</a></p>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+        </html>
+  
